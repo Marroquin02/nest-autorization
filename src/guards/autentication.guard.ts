@@ -49,6 +49,10 @@ export abstract class AutenticationGuard implements CanActivate {
       const requiredScopes =
         this.reflector.get<string[]>(SCOPES_KEY, context.getHandler()) || [];
 
+      if (!requiredScopes.length) {
+        throw new BadRequestException('Scopes no encontrados');
+      }
+
       const [request] = extractRequest(context);
 
       // if is not an HTTP request ignore this guard
