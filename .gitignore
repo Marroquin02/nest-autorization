@@ -1,0 +1,21 @@
+# Dependencias de npm
+node_modules/
+
+# Archivos de salida de TypeScript
+dist/
+
+# Archivos de log y caché
+*.log
+*.tgz
+*.cache
+.nyc_output/
+coverage/
+
+# Configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración de herramientas
+.env
+.idea/
+.vscode/
